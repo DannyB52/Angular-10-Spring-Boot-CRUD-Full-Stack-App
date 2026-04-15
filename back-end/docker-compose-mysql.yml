@@ -1,0 +1,14 @@
+
+services:
+  mysql-standalone1:
+    image: mysql:5.7
+    ports:
+      - 3306:3306
+    environment:
+    - MYSQL_ROOT_PASSWORD=admin123 
+    - MYSQL_DATABASE=test
+    - MYSQL_USER=testuser 
+    - MYSQL_PASSWORD=testuser@123
+    volumes:
+      - ./data:/var/lib/mysql
+ 
